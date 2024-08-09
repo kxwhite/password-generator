@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Password Generator</title>
+      <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="container">
+      <h1>Generate a <br><span class="green-span">random password</span></h1>
+      <p class="para">Never use an insecure password again.</p>
+      <br>
+      <h2 class="subtitle">Password settings</h2>
+      <div class="settings">
+        <div class="length-container">
+          <label for="input-length" class="input-title">Length: <label>
+              <br>
+              <input name="input-length" id="input-length" type="number">
+        </div>
+        <div class="exclude-container">
+          <p class="input-title">Exclude: </p>
+          <label class="checkbox-container">Symbols
+            <input type="checkbox" id="input-symbol">
+            <span class="checkmark"></span>
+          </label>
+          <label class="checkbox-container">Numbers
+            <input type="checkbox" id="input-number">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+
+      <button class="generate-btn btn" onclick="generate()">Generate passwords</button>
+      <p id="error-msg"></p>
+      <hr>
+      <div class="inputs-container">
+        <input id="input1" onclick="copyFirst()">
+        <input id="input2" onclick="copySecond()">
+      </div>
+      <button class="clear-btn btn" onclick="clearInputs()">Clear</button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
